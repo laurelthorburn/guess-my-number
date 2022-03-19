@@ -3,8 +3,8 @@ const playAgain = document.querySelector('.again');
 
 //define secret number
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
-
 let score = 20;
+let highscore = 0;
 
 document.querySelector('.check').addEventListener('click', function () {
   //wrap in Number() else it's a string, can console log type Of
@@ -20,6 +20,10 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('.number').textContent = secretNumber;
     document.querySelector('body').style.backgroundColor = '#60b347';
     document.querySelector('.number').style.width = '30rem';
+    if(score>highscore){
+        highscore = score;
+        document.querySelector('.highscore').textContent = highscore;
+    }
   } else if (guess < secretNumber) {
     if (score > 1) {
       document.querySelector('.message').textContent = 'Too low 📉';
@@ -42,11 +46,6 @@ document.querySelector('.check').addEventListener('click', function () {
 });
 
 //let user play again
-
-// playAgain.addEventListener('click', function(){
-// 	window.location.reload();
-// })
-
 playAgain.addEventListener('click', function () {
   score = 20;
   secretNumber = Math.trunc(Math.random() * 20) + 1;
