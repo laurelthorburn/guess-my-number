@@ -73,6 +73,8 @@ Laurel Thorburn
   <a name="picsection"></a>
   ## Screenshots
   ![Screenshot of Home Page](./screenshot1.png)
+  ![Screenshot of Winning](./screenshot2.png)
+  ![Screenshot of Losing](./screenshot3.png)
 
 
   <a name="linksection"></a>
